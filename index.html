@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600|Nanum+Brush+Script|Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
         <script src="d3/d3.min.js"></script>
         <title>Nathan Scattini</title>
     </head>
@@ -20,6 +21,8 @@
                 </ul>
             </nav>
             <div id="landing" class="landing">
+                <svg id="svg" viewBox = "0 0 1000 1000" preserveAspectRatio="none">
+                </svg>
                 <div id="type_text"></div>
                 <div id="landing_icons" class="landing_icons">
                     <a href="#"><i class="fab fa-free-code-camp"></i></a>
@@ -33,22 +36,41 @@
         </header>
 
         <section id="about" class="about">
-            <div class="about-text-container">
-                <h2>About Me</h2>
-                <p>My name is Nathan Scattini. I am the tall guy in the blue shirt(I'm not actually that tall. My family are just all very short).
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione autem repellendus perferendis sit assumenda eos aspernatur repellat odit expedita magnam? Cupiditate rem enim optio eligendi cumque temporibus voluptas similique velit.
-                </p>
-                <svg id="svg" viewBox = "0 0 1000 1000" preserveAspectRatio="none">
-                </svg>
+        <div class="about-image-flex-container">
+            <div class="about-img-container">
+                <img class="about-image" src="images/Me.jpg" alt="Picture of nathan scattini">
             </div>
-            <div class="about_img_container">
-            </div>
+        </div>
+          <div class="about-text-flex">
+              <h2 class="about-heading">I'm Nathan Scattini, <br/>Web Developer, Husband and Father<br /> from Adelaide, South Australia</h2>
+              <p class="about-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores consequuntur est reiciendis delectus autem maxime voluptatum molestias sequi beatae placeat dolorum odit iste, voluptas nobis reprehenderit dolor consequatur mollitia molestiae.</p>
+              <a href="#">Download Resume</a>
+          </div>
         </section>
 
         <section id="skills" class="skills">
         </section>
 
+        <section class="portfolio" id="portfolio">
+            <h3 class="portfolio-title">
+
+            </h3>
+            <ul class="protfolio-nav">
+                <li>All</li>
+                <li>JavaScript</li>
+                <li>React</li>
+            </ul>
+            <div class="portfolio-grid">
+                <div class="grid-container"><i class="far fa-images"></i></div>
+                <div class="grid-container"><i class="far fa-clock"></i></div>
+                <div class="grid-container"><i class="fas fa-user-friends"></i></div>
+                <div class="grid-container"></div>
+                <div class="grid-container"></div>
+                <div class="grid-container"></div>     
+            </div>
+        </section>
+
         <script src="javascript/javascript.js"></script>
- 
+        
     </body>
 </html>
