@@ -18,6 +18,8 @@ let arrowSwitch = false;
 let color = "blue"
 let random_interval;
 let startFinish = ["0", "1000"];
+let gridList = document.querySelector(".portfolio-nav");
+let portfolioGrid = document.querySelector(".portfolio-grid");
 
 ///////Heading Typed/////
 setInterval(function(){
@@ -88,5 +90,28 @@ setInterval(()=>{
  }, 4000)
 
 
-//////////////////////////// D3 stuff /////////////////////////////////
+//////////////////////////// grid /////////////////////////////////
 
+function arangeGrid(e){
+    let gridArray = portfolioGrid.childNodes
+    let selectorThing = portfolioGrid.childNodes[1].getAttribute("selector")
+    console.log(e.getAttribute("selector"));
+    console.log(selectorThing);
+    for(let i = 1; i < gridArray.length; i += 2){
+        console.log(e.getAttribute("selector"))
+        if(e.getAttribute("selector")=== "all-selector"){
+            portfolioGrid.childNodes[i].style.position = "relative"
+            portfolioGrid.childNodes[i].style.display = "flex"
+            portfolioGrid.childNodes[i].style.left = "0"
+        }
+        else if(!(portfolioGrid.childNodes[i].getAttribute("selector") === (e.getAttribute("selector")))){
+            portfolioGrid.childNodes[i].style.left = "100vw"
+            portfolioGrid.childNodes[i].style.position = "absolute"
+        }
+        else{
+            portfolioGrid.childNodes[i].style.left = "0"
+            portfolioGrid.childNodes[i].style.position = "relative"
+            portfolioGrid.childNodes[i].style.display = "flex"
+        }
+    }
+}

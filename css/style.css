@@ -9,13 +9,15 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+    color: #222;
 }
 
 /*///header///*/
 
 header{
     position: relative;
-    color: white;
+    color: #f3f3f3;
 }
 
 /*///navbar///*/
@@ -81,7 +83,7 @@ header{
 
 .landing_icons a i{
     font-size: 1.5rem;
-    color: white;
+    color: #f3f3f3;
 }
 
 .landing_icons a i:nth-of-type(1){
@@ -100,6 +102,7 @@ header{
 .about{
     display: flex;
     height: 100vh;
+    position: relative;
 }
 
 .about-image-flex-container{
@@ -107,6 +110,7 @@ header{
     align-items: center;
     justify-content: flex-end;
     flex: 3;
+    z-index: 1;
 }
 
 .about-text-flex{
@@ -116,6 +120,7 @@ header{
     margin-left: 50px;
     flex-direction: column;
     padding-right: 5%;
+    z-index: 1;
 }
 
 .about-img-container{
@@ -139,31 +144,67 @@ header{
 .about-text{
     line-height: 142%;
     margin-bottom: 20px;
-   
+    color: #444;
+}
+
+.about-sub-heading{
+    margin-bottom: 20px;
 }
 
 /*//////portfolio//////*/
 
 .portfolio{
     padding: 100px;
+    background-color: #e4e4e4;
+    overflow: hidden;
+    min-height: 100vh;
 }
 
 .portfolio-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 50px;
-    margin-right: 50px;
-    grid-gap: 50px;
+    grid-gap: 20px;
+    position: relative;
+    min-height: 100vh;
 }
+
+.portfolio-title{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.portfolio-nav{
+    list-style: none;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.portfolio-nav > li{
+    margin-right: 20px;
+    transition: all 2s;
+}
+
+.portfolio-nav > li:hover{
+    color:  #9b59b6;
+}
+
+
 
 .grid-container{
     height: 300px;
-    width: 100%;
+    width: 350px;
     display: flex;
     align-items:center;
     justify-content: center;
     border-radius: 4px;
+    flex-direction: column;
+    color: #f3f3f3;
+    transition: left 1s, right 1s;
+    transition: all 1s, width .4s;
+    position: relative;
+    left: 0;
 }
+
+
 
 .grid-container:nth-of-type(1){
     background: #9b59b6;
@@ -190,6 +231,14 @@ header{
 }
 .grid-container > i{
     font-size: 3rem;
+}
+
+.grid-seperator{
+    height: 4px;
+    width: 10%;
+    background-color: #f3f3f3;
+    margin: 20px 0;
+    border-radius: 20px;
 }
 
 
